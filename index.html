@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Apps</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="static/images/icon.png">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="static/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="static/utils.js"></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div class="w3-container w3-black w3-padding">
+    <div class="w3-center fit-width">
+      <h1 class="w3-xxlarge">Apps</h1>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="w3-container fit-width">
+    <div id="link-container" class="w3-row-padding w3-center w3-margin-top">
+
+    </div>
+  </div>
+  <br><br><br><br>
+
+</body>
+
+
+
+<!-- CONFIG -->
+<script>
+
+  const links = [
+    {
+      'name': 'Fantasy Forecaster',
+      'url': 'https://jackarnold84.github.io/fantasy-forecaster/',
+      'icon': 'https://jackarnold84.github.io/fantasy-forecaster/static/images/icon.png',
+    },
+    {
+      'name': 'Tab Splitter',
+      'url': 'https://jackarnold84.github.io/tab-splitter/',
+      'icon': 'https://jackarnold84.github.io/tab-splitter/icon.png',
+    },
+    {
+      'name': 'Book Tracker',
+      'url': 'https://jackarnold84.github.io/book-tracker/',
+      'icon': 'https://jackarnold84.github.io/book-tracker/static/images/icon.png',
+    },
+    {
+      'name': 'Jimmy Randomizer',
+      'url': 'https://jknull77.github.io/jimmy-randomizer/',
+      'icon': 'https://jknull77.github.io/jimmy-randomizer/static/jj-icon.webp',
+    },
+    {
+      'name': 'SportsWiz',
+      'url': 'http://sportswiz.s3-website.us-east-2.amazonaws.com/home.html',
+      'icon': 'http://sportswiz.s3-website.us-east-2.amazonaws.com/static/icon_globe.png',
+    },
+    {
+      'name': 'Parking QR Generator',
+      'url': 'https://pf-5.github.io/left-bank-parking/',
+      'icon': 'https://cdn3.iconfinder.com/data/icons/car-icons-front-views/451/Compact_Car_Front_View-512.png',
+    },
+    {
+      'name': 'Disc Golf Elo',
+      'url': 'https://jackarnold84.github.io/disc-golf/',
+      'icon': 'https://jackarnold84.github.io/disc-golf/images/basket_icon.png',
+    },
+  ]
+
+</script>
+
+
+<!-- GENERATE -->
+<script>
+
+  links.forEach(x => {
+    $('#link-container').append(
+      `
+      <div class="w3-third w3-padding">
+        <a href='${x.url}'>
+          <div class="w3-card w3-container w3-border appcard" style="min-height:200px">
+            <h3>${x.name}</h3><br>
+            <img src='${x.icon}' height="80px">
+          </div>
+        </a>
+      </div>
+      `
+    )
+  })
+
+</script>
+
+
+</html>
